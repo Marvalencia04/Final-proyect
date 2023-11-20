@@ -57,3 +57,20 @@ C:\xampp\htdocs\Final proyect\Final project\obj\Debug\Final project.csproj.CoreC
 C:\xampp\htdocs\Final proyect\Final project\obj\Debug\Final project.csproj.CopyComplete
 C:\xampp\htdocs\Final proyect\Final project\obj\Debug\Final project.dll
 C:\xampp\htdocs\Final proyect\Final project\obj\Debug\Final project.pdb
+C:\xampp\htdocs\Final proyect\Final project\bin\EntityFramework.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\EntityFramework.SqlServer.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\SQLitePCLRaw.core.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Buffers.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Data.SQLite.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Data.SQLite.EF6.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Data.SQLite.Linq.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Memory.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Numerics.Vectors.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\xampp\htdocs\Final proyect\Final project\bin\EntityFramework.xml
+C:\xampp\htdocs\Final proyect\Final project\bin\EntityFramework.SqlServer.xml
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Buffers.xml
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Data.SQLite.xml
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Memory.xml
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Numerics.Vectors.xml
+C:\xampp\htdocs\Final proyect\Final project\bin\System.Runtime.CompilerServices.Unsafe.xml
