@@ -33,6 +33,15 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.ListBox ListStudents;
 
         /// <summary>
+        /// ListProfessor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ListProfessor;
+
+        /// <summary>
         /// Subjects_student control.
         /// </summary>
         /// <remarks>
@@ -78,6 +87,24 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.TextBox Name_txtbox;
 
         /// <summary>
+        /// AddStudentSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddStudentSubject;
+
+        /// <summary>
+        /// AddProfessorSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddProfessorSubject;
+
+        /// <summary>
         /// Surname control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,24 @@ namespace Final_project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Surname_txtbox;
+
+        /// <summary>
+        /// DeleteStudentSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteStudentSubject;
+
+        /// <summary>
+        /// DeleteProfessorSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteProfessorSubject;
 
         /// <summary>
         /// DoB control.

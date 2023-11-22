@@ -16,9 +16,10 @@ namespace Final_project
         public string DateOfBirth { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
+        public string Nation { get; set; }
 
         // Constructor
-        public Student(string id, string name, string surname, string dateOfBirth, string address, string email)
+        public Student(string id, string name, string surname, string dateOfBirth, string address, string email,string nation)
         {
             ID = id;
             Name = name;
@@ -26,6 +27,7 @@ namespace Final_project
             DateOfBirth = dateOfBirth;
             Address = address;
             Email = email;
+            Nation = nation;
         }
 
         // You can also override ToString() method for better representation
