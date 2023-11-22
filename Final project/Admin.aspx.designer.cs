@@ -33,6 +33,15 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.ListBox ListStudents;
 
         /// <summary>
+        /// ListProfessor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ListProfessor;
+
+        /// <summary>
         /// Subjects_student control.
         /// </summary>
         /// <remarks>
@@ -42,13 +51,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.DropDownList Subjects_student;
 
         /// <summary>
-        /// ListStudents0 control.
+        /// ListProfessors control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListStudents0;
+        protected global::System.Web.UI.WebControls.ListBox ListProfessors;
 
         /// <summary>
         /// ListStudents1 control.
@@ -69,13 +78,31 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Name;
 
         /// <summary>
-        /// TextBox1 control.
+        /// Name_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Name_txtbox;
+
+        /// <summary>
+        /// AddStudentSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddStudentSubject;
+
+        /// <summary>
+        /// AddProfessorSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddProfessorSubject;
 
         /// <summary>
         /// Surname control.
@@ -87,13 +114,31 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Surname;
 
         /// <summary>
-        /// TextBox2 control.
+        /// Surname_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox Surname_txtbox;
+
+        /// <summary>
+        /// DeleteStudentSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteStudentSubject;
+
+        /// <summary>
+        /// DeleteProfessorSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteProfessorSubject;
 
         /// <summary>
         /// DoB control.
@@ -105,13 +150,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label DoB;
 
         /// <summary>
-        /// TextBox3 control.
+        /// DOB_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox DOB_txtbox;
 
         /// <summary>
         /// Nationality control.
@@ -123,13 +168,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Nationality;
 
         /// <summary>
-        /// TextBox4 control.
+        /// Nation_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox Nation_txtbox;
 
         /// <summary>
         /// IDNumber control.
@@ -141,13 +186,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label IDNumber;
 
         /// <summary>
-        /// TextBox5 control.
+        /// ID_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox ID_txtbox;
 
         /// <summary>
         /// Adress control.
@@ -159,13 +204,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Adress;
 
         /// <summary>
-        /// TextBox6 control.
+        /// Adress_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox Adress_txtbox;
 
         /// <summary>
         /// EMail control.
@@ -177,13 +222,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label EMail;
 
         /// <summary>
-        /// TextBox7 control.
+        /// Email_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox Email_txtbox;
 
         /// <summary>
         /// Add control.
