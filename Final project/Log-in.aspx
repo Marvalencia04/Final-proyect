@@ -11,9 +11,14 @@
         <div>
             <asp:Label ID="User_label" runat="server" Text="ID:"></asp:Label>
             <asp:TextBox ID="txt_box_User" runat="server"></asp:TextBox>
+            <br />
+            Password:<asp:TextBox ID="txt_box_Pass" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red"></asp:Label>
+
         </div>
         <p>
-            <asp:Button ID="Btn_login" runat="server" Text="Log in" />
+            <asp:Button ID="Btn_login" runat="server" Text="Log in" OnClick="Btn_login_Click" />
         </p>
     </form>
 </body>

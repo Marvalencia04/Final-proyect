@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Security.Cryptography;
 
 
 namespace Final_project
@@ -28,10 +29,11 @@ namespace Final_project
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + pathDB + ";Version=3;"))
             {
                 conn.Open();
-                string query = "SELECT * FROM Students";
+                string query = "SELECT * FROM Users WHERE Profile = @Profile";
 
                 using (SQLiteCommand comm = new SQLiteCommand(query, conn))
                 {
+                    comm.Parameters.AddWithValue("@Profile", "Student");
                     using (SQLiteDataReader reader = comm.ExecuteReader())
                     {
                         DataTable dt = new DataTable();
@@ -39,7 +41,7 @@ namespace Final_project
 
                         foreach (DataRow dr in dt.Rows)
                         {
-                            string ID = dr["Student_ID"].ToString();
+                            string ID = dr["ID"].ToString();
                             ListStudents.Items.Add(ID);
                         }
                     }
@@ -53,10 +55,10 @@ namespace Final_project
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + pathDB + ";Version=3;"))
             {
                 conn.Open();
-                string query = "SELECT * FROM Professors";
-
+                string query = "SELECT * FROM Users WHERE Profile = @Profile";
                 using (SQLiteCommand comm = new SQLiteCommand(query, conn))
                 {
+                    comm.Parameters.AddWithValue("@Profile", "Professor");
                     using (SQLiteDataReader reader = comm.ExecuteReader())
                     {
                         DataTable dt = new DataTable();
@@ -64,7 +66,7 @@ namespace Final_project
 
                         foreach (DataRow dr in dt.Rows)
                         {
-                            string ID = dr["Professor_ID"].ToString();
+                            string ID = dr["ID"].ToString();
                             ListProfessor.Items.Add(ID);
                         }
                     }
@@ -120,13 +122,20 @@ namespace Final_project
 
         protected void Add_Click(object sender, EventArgs e)
         {
-            Student student = new Student(ID_txtbox.Text, Name_txtbox.Text, Surname_txtbox.Text, DOB_txtbox.Text, Adress_txtbox.Text, Email_txtbox.Text,Nation_txtbox.Text);
+            string password = Pass_txtbox.Text;
+
+            /*using (MD5 md5Hash = MD5.Create())
+            { 
+                byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                password = BitConverter.ToString(data).Replace("-", string.Empty);
+            }*/
+            User student = new User(ID_txtbox.Text, Name_txtbox.Text, Surname_txtbox.Text, DOB_txtbox.Text, Adress_txtbox.Text, Email_txtbox.Text, Nation_txtbox.Text, password);
             string pathDB = Server.MapPath("~/bin/Debug/data/University.db");
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + pathDB + ";Version=3;"))
             {
                 conn.Open();
-                string query = @"INSERT INTO Students (Student_ID, Name,Surname,DOB,Address,Email,Nationality) 
-                    VALUES (@ID, @Name, @Surname,@DOB,@Address,@Email,@Nationality)";
+                string query = @"INSERT INTO Users (ID, Name,Surname,DOB,Address,Email,Nationality,Profile,Password) 
+                    VALUES (@ID, @Name, @Surname,@DOB,@Address,@Email,@Nationality,@Profile,@Password)";
 
                 SQLiteCommand comm = new SQLiteCommand(query, conn);
                 comm.Parameters.AddWithValue("@ID", student.ID);
@@ -136,6 +145,8 @@ namespace Final_project
                 comm.Parameters.AddWithValue("@Address", student.Address);
                 comm.Parameters.AddWithValue("@Email", student.Email);
                 comm.Parameters.AddWithValue("@Nationality", student.Nation);
+                comm.Parameters.AddWithValue("@Password", student.Password);
+                comm.Parameters.AddWithValue("@Profile", DropDownProfile.SelectedValue.ToString());
                 SQLiteDataAdapter da = new SQLiteDataAdapter();
                 da.InsertCommand = comm;
                 da.InsertCommand.ExecuteNonQuery();
@@ -219,11 +230,11 @@ namespace Final_project
             using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + pathDB + ";Version=3;"))
             {
                 conn.Open();
-                string query = "SELECT * FROM Students WHERE Student_ID = @StudentID";
+                string query = "SELECT * FROM Users WHERE ID = @ID";
 
                 using (SQLiteCommand comm = new SQLiteCommand(query, conn))
                 {
-                    comm.Parameters.AddWithValue("@StudentID", selectedStudentID);
+                    comm.Parameters.AddWithValue("@ID", selectedStudentID);
 
                     using (SQLiteDataReader reader = comm.ExecuteReader())
                     {
@@ -233,14 +244,14 @@ namespace Final_project
                         foreach (DataRow dr in dt.Rows)
                         {
                             Name_txtbox.Text = dr["Name"].ToString();
-                            ID_txtbox.Text = dr["Student_ID"].ToString();
+                            ID_txtbox.Text = dr["ID"].ToString();
                             Surname_txtbox.Text = dr["Surname"].ToString();
                             DOB_txtbox.Text = dr["DOB"].ToString();
                             Adress_txtbox.Text = dr["Address"].ToString();
                             Nation_txtbox.Text = dr["Nationality"].ToString();
                             Email_txtbox.Text = dr["Email"].ToString();
-                            ListStudents.AutoPostBack = true;
-
+                            Pass_txtbox.Text = dr["Password"].ToString();
+                            DropDownProfile.SelectedIndex = 0;
                         }
                     }
                 }
@@ -294,5 +305,51 @@ namespace Final_project
             }
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DropDownProfile_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ListProfessor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedStudentID = ListProfessor.SelectedValue;
+
+            string pathDB = Server.MapPath("~/bin/Debug/data/University.db");
+            using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + pathDB + ";Version=3;"))
+            {
+                conn.Open();
+                string query = "SELECT * FROM Users WHERE ID = @ID";
+
+                using (SQLiteCommand comm = new SQLiteCommand(query, conn))
+                {
+                    comm.Parameters.AddWithValue("@ID", selectedStudentID);
+
+                    using (SQLiteDataReader reader = comm.ExecuteReader())
+                    {
+                        DataTable dt = new DataTable();
+                        dt.Load(reader);
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            Name_txtbox.Text = dr["Name"].ToString();
+                            ID_txtbox.Text = dr["ID"].ToString();
+                            Surname_txtbox.Text = dr["Surname"].ToString();
+                            DOB_txtbox.Text = dr["DOB"].ToString();
+                            Adress_txtbox.Text = dr["Address"].ToString();
+                            Nation_txtbox.Text = dr["Nationality"].ToString();
+                            Email_txtbox.Text = dr["Email"].ToString();
+                            Pass_txtbox.Text = dr["Password"].ToString();
+                            DropDownProfile.SelectedIndex = 1;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }

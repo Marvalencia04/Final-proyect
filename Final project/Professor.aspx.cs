@@ -11,6 +11,8 @@ namespace Final_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Credtis.Text = Session["ID"].ToString();
+            Semester.Text = Session["Profile"].ToString();
 
         }
     }

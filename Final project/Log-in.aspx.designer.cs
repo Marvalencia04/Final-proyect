@@ -42,6 +42,24 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.TextBox txt_box_User;
 
         /// <summary>
+        /// txt_box_Pass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_box_Pass;
+
+        /// <summary>
+        /// lblErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+
+        /// <summary>
         /// Btn_login control.
         /// </summary>
         /// <remarks>
