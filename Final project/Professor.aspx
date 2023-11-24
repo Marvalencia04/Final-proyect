@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-            <asp:DropDownList ID="Subjects_professor" runat="server">
+            <asp:DropDownList ID="Subjects_professor" runat="server" OnSelectedIndexChanged="Subjects_professor_SelectedIndexChanged">
             </asp:DropDownList>
             <br />
             <asp:Label ID="Credtis" runat="server" Text="Credits:"></asp:Label>

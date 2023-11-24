@@ -33,13 +33,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Name;
 
         /// <summary>
-        /// TextBox1 control.
+        /// Name_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Name_txtbox;
 
         /// <summary>
         /// Subjects_student control.
@@ -60,13 +60,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Surname;
 
         /// <summary>
-        /// TextBox2 control.
+        /// Surname_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox Surname_txtbox;
 
         /// <summary>
         /// Credtis control.
@@ -87,13 +87,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label DoB;
 
         /// <summary>
-        /// TextBox3 control.
+        /// DOA_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox DOA_txtbox;
 
         /// <summary>
         /// Semester control.
@@ -114,13 +114,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Nationality;
 
         /// <summary>
-        /// TextBox4 control.
+        /// Nationality_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox Nationality_txtbox;
 
         /// <summary>
         /// Professors control.
@@ -141,13 +141,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label IDNumber;
 
         /// <summary>
-        /// TextBox5 control.
+        /// ID_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox ID_txtbox;
 
         /// <summary>
         /// Adress control.
@@ -159,13 +159,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label Adress;
 
         /// <summary>
-        /// TextBox6 control.
+        /// Address_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox Address_txtbox;
 
         /// <summary>
         /// EMail control.
@@ -177,13 +177,13 @@ namespace Final_project
         protected global::System.Web.UI.WebControls.Label EMail;
 
         /// <summary>
-        /// TextBox7 control.
+        /// Email_txtbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox Email_txtbox;
 
         /// <summary>
         /// Button1 control.
